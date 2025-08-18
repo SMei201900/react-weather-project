@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './Weather.css';
 import search_icon from '../assets/search-icon.jpg'
 import cloudy_icon from '../assets/cloudy-icon.png'
@@ -13,6 +13,22 @@ import thunderstorm_icon from '../assets/thunderstorm-icon.png'*/
 
 
 const Weather = () => {
+  const search = async(city, country) => {
+    try {
+        const url = `https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${import.meta.env.VITE_APP_ID}`;
+
+        const response = await fetch(url);
+        const data = await response.json();
+        console.log(data);
+    } catch (error) {
+      console.log("couldnt load", error);
+    }
+  }
+
+  useEffect(()=>{
+    search("London, England")
+  },[])
+
   return (
     <div className='weather'>
         <h1>Weather</h1>
