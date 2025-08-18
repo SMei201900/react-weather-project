@@ -11,8 +11,6 @@ const App = () => {
 
 export default App
 
-/*rafac is shortcut*/
-
 /*
 https://www.flaticon.com/free-animated-icons/weather 
 https://fontawesome.com/icons/categories/weather 

@@ -44,6 +44,12 @@ const Weather = () => {
         /*const aqiURL = `http://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=${import.meta.env.VITE_APP_ID}`;*/
         const response = await fetch(url);
         const data = await response.json();
+
+        if(!response.ok) {
+          alert(data.message); /*tells us city not found, invalid API key things like that*/
+          return;
+        }
+
         console.log(data);
 
         const icon = allIcons[data.weather[0].icon] || sun_icon
@@ -60,7 +66,9 @@ const Weather = () => {
         });
 
     } catch (error) {
-      console.log("couldnt load", error);
+      setWeatherData(false);
+      console.log("Error in fetching data", error);
+      /*i should use axios or something to show error in getching data alert*/
     }
   }
 
@@ -120,7 +128,6 @@ other weather information that we still need is sunset/sunrise time
       in the same area there is data.sys.timezone  
 feels-like is provided by openAPI so we can add that maybe? data.main.feels_like
 temp min and max? data.main.temp_max AND data.main.temp_min
-
 
 sunset might be uv index also 
 
