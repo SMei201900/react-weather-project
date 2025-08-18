@@ -1,38 +1,17 @@
 import React, { useEffect, useRef, useState } from 'react'
 import './Weather.css';
 import search_icon from '../assets/search-icon.jpg'
-import cloudy_icon from '../assets/cloudy-icon.png'
+
+import {weathericons} from "./weathericons"
+
 import windy_icon from '../assets/wind-icon.png'
 import humidity_icon from '../assets/humidity-icon.png'
-import rain_icon from '../assets/rain-icon.png'
-import snowy_icon from '../assets/snow-icon.png'
 import sun_icon from '../assets/sun-icon.png'
-import thunderstorm_icon from '../assets/thunderstorm-icon.png'
-
 
 const Weather = () => {
 
   const userinput = useRef()
   const [weatherData, setWeatherData] = useState(false);
-
-  const allIcons = {
-    "01d" : sun_icon, 
-    "01n" : sun_icon, 
-    "02d" : cloudy_icon, 
-    "02n" : cloudy_icon, 
-    "03d" : cloudy_icon, 
-    "03n" : cloudy_icon, 
-    "04d" : cloudy_icon, 
-    "04n" : cloudy_icon, 
-    "09d" : rain_icon, 
-    "09n" : rain_icon, 
-    "10d" : rain_icon, 
-    "10n" : rain_icon, 
-    "11d" : thunderstorm_icon, 
-    "11n" : thunderstorm_icon, 
-    "13d" : snowy_icon, 
-    "13n" : snowy_icon
-  }
 
   const search = async(city, country) => {
     if(city === "") {
@@ -52,7 +31,7 @@ const Weather = () => {
 
         console.log(data);
 
-        const icon = allIcons[data.weather[0].icon] || sun_icon
+        const icon = weathericons[data.weather[0].icon] || sun_icon
         const theweatheris = data.weather[0].description
 
         setWeatherData({
