@@ -27,6 +27,12 @@ sunset might be uv index also
 
 /*
 https://www.flaticon.com/free-animated-icons/weather 
-https://basmilius.github.io/weather-icons/ 
 https://fontawesome.com/icons/categories/weather 
+*/
+
+/*MAYBES
+https://www.flaticon.com/free-animated-icon/hurricane_17858153 
+https://www.flaticon.com/free-animated-icon/flood_18821565 
+https://www.flaticon.com/free-animated-icon/twister_11688571 
+https://www.flaticon.com/free-animated-icon/drought_17858201 
 */
