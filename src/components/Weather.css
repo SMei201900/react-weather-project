@@ -62,7 +62,31 @@ h1 {
     text-decoration: wavy underline 3px #F25477;
 }
 
-
 .location {
     font-size: 38px;
 }
+
+.weatherData {
+    font-size: 20px;;
+}
+
+.weatherData-col {
+    display: flex;
+    flex-direction: row;
+}
+
+.weatherDataIcon {
+    width: 100px;
+    padding: 10px; 
+}
+
+.weatherDataContents {
+    padding: 10px; 
+    display: flex;
+    text-align: left;
+}
+
+.weatherDataContents span, p {
+    padding:2px;
+}
+
