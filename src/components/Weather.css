@@ -44,7 +44,7 @@ h1 {
 
 .weatherIcon {
     width: 150px;
-    margin: 30px 0; 
+    margin: 20px 0 10px 0; 
 }
 
 .temp {
@@ -67,26 +67,25 @@ h1 {
 }
 
 .weatherData {
-    font-size: 20px;;
+    width: 100%;
+    margin-top: 40px;
+    display: flex; 
+    justify-content: space-between;
 }
 
-.weatherData-col {
-    display: flex;
-    flex-direction: row;
+.weatherData .col{
+    display: flex; /*we want items to align side-by-side*/
+    align-items: flex-start;
+    gap: 8px;
+    margin-left: 10px;
+    font-size: 20px;
 }
 
-.weatherDataIcon {
-    width: 100px;
-    padding: 10px; 
+.weatherData .col img {
+    width: 65px;
+    padding: 8px; 
 }
 
-.weatherDataContents {
-    padding: 10px; 
-    display: flex;
-    text-align: left;
-}
 
-.weatherDataContents span, p {
-    padding:2px;
-}
+
 
