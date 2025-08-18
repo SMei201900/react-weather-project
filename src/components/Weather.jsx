@@ -10,7 +10,6 @@ const Weather = () => {
             <input type="text" placeholder='Chicago' />
             <img src={search_icon} alt="magnifying glass image to represent a search icon" />
         </div>
-
     </div>
   )
 }

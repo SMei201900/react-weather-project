@@ -11,12 +11,13 @@
 .app-container {
   min-height: 100vh;
   display: grid; /*should align our app in the middle*/
-  background-image: linear-gradient(to right top, 
+  background-color: #FFF8BF;
+  /*background-image: linear-gradient(to right top, 
     #d5dee7, 
     #ffbab9,
     #fecc9f, 
     #e2eea8, 
-    #c9ffbf);
+    #c9ffbf);*/
 }
 
 /*dark mode maybe? 
@@ -26,3 +27,5 @@
 #1d1157
 #360040
 */
+
+/*if changing background based on weather, gray-beige gradient is good for cloudy/storm weather*/
