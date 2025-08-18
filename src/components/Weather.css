@@ -32,6 +32,12 @@ h1 {
 }
 
 .searchbar img {
-    max-height: 35px;
     mix-blend-mode: multiply; /*removes the white background from the image*/
+    width: 50px;
+    border-radius: 50%; /*makes it round*/
+    cursor: pointer; 
+}
+
+.searchbar img:hover {
+    border: dashed 2px #f3b6c7;
 }
