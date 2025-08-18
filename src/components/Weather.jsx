@@ -52,7 +52,7 @@ const Weather = () => {
   }
 
   useEffect(()=>{
-    search("London, England")
+    search("New York") /*The default that shows up when you load into the page*/
   },[])
 
   return (
