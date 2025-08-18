@@ -4,6 +4,8 @@ import rain_icon from '../assets/rain-icon.png'
 import snowy_icon from '../assets/snow-icon.png'
 import sun_icon from '../assets/sun-icon.png'
 import thunderstorm_icon from '../assets/thunderstorm-icon.png'
+import windy_icon from '../assets/wind-icon.png'
+import humidity_icon from '../assets/humidity-icon.png'
 
 export const weathericons = {
     "01d" : sun_icon, 
@@ -22,4 +24,9 @@ export const weathericons = {
     "11n" : thunderstorm_icon, 
     "13d" : snowy_icon, 
     "13n" : snowy_icon
+}
+
+export const defaultWeatherIcons = {
+    windy_icon: windy_icon,
+    humidity_icon: humidity_icon
 }

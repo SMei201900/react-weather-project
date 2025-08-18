@@ -1,10 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import './Weather.css';
 import search_icon from '../assets/search-icon.jpg'
-import {weathericons} from "./weathericons"
-import windy_icon from '../assets/wind-icon.png'
-import humidity_icon from '../assets/humidity-icon.png'
-import sun_icon from '../assets/sun-icon.png'
+import {weathericons, defaultWeatherIcons} from "./weathericons"
 
 const Weather = () => {
 
@@ -30,7 +27,7 @@ const Weather = () => {
 
         console.log(data); /*remove when done*/
 
-        const icon = weathericons[data.weather[0].icon] || sun_icon
+        const icon = weathericons[data.weather[0].icon] || defaultWeatherIcons.sun_icon
         const theweatheris = data.weather[0].description
 
         setWeatherData({
@@ -76,7 +73,7 @@ const Weather = () => {
 
           <div className="weather-data"> 
             <div className="col">          
-                <img src={humidity_icon} alt="Humidity represented by water droplets" />
+                <img src={defaultWeatherIcons.humidity_icon} alt="Humidity represented by water droplets" />
                 <div>
                   <span>Humidity: </span>
                   <p>{weatherData.humidity} % </p>
@@ -84,7 +81,7 @@ const Weather = () => {
               </div>
 
               <div className="col">          
-                <img src={windy_icon} alt="An icon representing wind speed"/>
+                <img src={defaultWeatherIcons.windy_icon} alt="An icon representing wind speed"/>
                 <div>
                   <span>Wind Speed</span>
                   <p>{weatherData.windspeed} km/h</p>
