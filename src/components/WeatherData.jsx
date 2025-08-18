@@ -1,8 +1,8 @@
+import React from 'react'
 import {toast} from 'react-toastify'
 import { weathericons } from './weathericons';
 
 export const fetchWeatherData = async (city) => {
-    
     /*created to handle an empty search*/
     if(city === "") {
       toast.error("Enter City Name");
@@ -37,6 +37,7 @@ export const fetchWeatherData = async (city) => {
         return null; 
     }
 }; 
+
 
 
 
