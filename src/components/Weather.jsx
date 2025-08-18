@@ -3,12 +3,13 @@ import './Weather.css';
 import search_icon from '../assets/search-icon.jpg'
 import {weathericons, defaultIcons} from "./weathericons"
 import {toast, ToastContainer} from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
 
 const Weather = ({userinput}) => {
 
   const [weatherData, setWeatherData] = useState(false);
 
-  const search = async(city, country) => {
+  const search = async(city, country) => { /*created to handle an empty search*/
     if(city === "") {
       toast.error("Enter City Name");
       return;
@@ -21,7 +22,7 @@ const Weather = ({userinput}) => {
         const data = await response.json();
 
         if(!response.ok) {
-          /*alert(data.message); /*tells us city not found, invalid API key things like that*/
+          toast.error(data.message) /*tells us city not found, invalid API key things like that*/
           return;
         }
 
@@ -40,9 +41,8 @@ const Weather = ({userinput}) => {
 
     } catch (error) {
       setWeatherData(false);
+      console.log("Error in fetching data. Here is the error message: ", error)
       toast.error("Error in fetching data.")
-      console.log("Error in fetching data. Here is the error message:", error);
-      /*i should use axios or something to show error in getching data alert*/
     }
   }
 
@@ -60,6 +60,8 @@ const Weather = ({userinput}) => {
               alt="magnifying glass image to represent a search icon" 
               onClick={()=>search(userinput.current.value)} />
         </div>
+
+        <ToastContainer /> 
 
         {weatherData?<>
           <img src={weatherData.icon} alt="clouds" className='weatherIcon'/>
@@ -88,8 +90,6 @@ const Weather = ({userinput}) => {
               </div>
             </div>
           </>:<></>}
-
-          <ToastContainer /> 
     </div>
   )
 }
