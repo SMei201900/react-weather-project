@@ -1,16 +1,16 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './Weather.css';
 import search_icon from '../assets/search-icon.jpg'
-import {weathericons, defaultWeatherIcons} from "./weathericons"
+import {weathericons, defaultIcons} from "./weathericons"
+import {toast, ToastContainer} from 'react-toastify'
 
-const Weather = () => {
+const Weather = ({userinput}) => {
 
-  const userinput = useRef()
   const [weatherData, setWeatherData] = useState(false);
 
   const search = async(city, country) => {
     if(city === "") {
-      alert("Enter City Name");
+      toast.error("Enter City Name");
       return;
     }
 
@@ -21,13 +21,11 @@ const Weather = () => {
         const data = await response.json();
 
         if(!response.ok) {
-          alert(data.message); /*tells us city not found, invalid API key things like that*/
+          /*alert(data.message); /*tells us city not found, invalid API key things like that*/
           return;
         }
 
-        console.log(data); /*remove when done*/
-
-        const icon = weathericons[data.weather[0].icon] || defaultWeatherIcons.sun_icon
+        const icon = weathericons[data.weather[0].icon] || "null"
         const theweatheris = data.weather[0].description
 
         setWeatherData({
@@ -42,7 +40,8 @@ const Weather = () => {
 
     } catch (error) {
       setWeatherData(false);
-      console.log("Error in fetching data", error);
+      toast.error("Error in fetching data.")
+      console.log("Error in fetching data. Here is the error message:", error);
       /*i should use axios or something to show error in getching data alert*/
     }
   }
@@ -73,7 +72,7 @@ const Weather = () => {
 
           <div className="weather-data"> 
             <div className="col">          
-                <img src={defaultWeatherIcons.humidity_icon} alt="Humidity represented by water droplets" />
+                <img src={defaultIcons.humidity_icon} alt="Humidity represented by water droplets" />
                 <div>
                   <span>Humidity: </span>
                   <p>{weatherData.humidity} % </p>
@@ -81,7 +80,7 @@ const Weather = () => {
               </div>
 
               <div className="col">          
-                <img src={defaultWeatherIcons.windy_icon} alt="An icon representing wind speed"/>
+                <img src={defaultIcons.windy_icon} alt="An icon representing wind speed"/>
                 <div>
                   <span>Wind Speed</span>
                   <p>{weatherData.windspeed} km/h</p>
@@ -89,6 +88,8 @@ const Weather = () => {
               </div>
             </div>
           </>:<></>}
+
+          <ToastContainer /> 
     </div>
   )
 }
