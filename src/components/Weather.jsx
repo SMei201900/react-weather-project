@@ -5,10 +5,10 @@ import cloudy_icon from '../assets/cloudy-icon.png'
 
 /*
 import rain_icon from '../assets/rain-icon.png'
-import snowy_icon from '../assets/snowy-icon.png'
+import snowy_icon from '../assets/snow-icon.png'
 import sun_icon from '../assets/sun-icon.png'
 import thunderstorm_icon from '../assets/thunderstorm-icon.png'
-import windy_icon from '../assets/windy-icon.png'
+import windy_icon from '../assets/wind-icon.png'
 import humidity_icon from '../assets/humidity-icon.png'*/
 
 const Weather = () => {
