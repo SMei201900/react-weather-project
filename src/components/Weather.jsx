@@ -1,9 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import './Weather.css';
 import search_icon from '../assets/search-icon.jpg'
-
 import {weathericons} from "./weathericons"
-
 import windy_icon from '../assets/wind-icon.png'
 import humidity_icon from '../assets/humidity-icon.png'
 import sun_icon from '../assets/sun-icon.png'
@@ -18,6 +16,7 @@ const Weather = () => {
       alert("Enter City Name");
       return;
     }
+
     try {
         const url = `https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&units=metric&appid=${import.meta.env.VITE_APP_ID}`;
         /*const aqiURL = `http://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=${import.meta.env.VITE_APP_ID}`;*/
@@ -29,7 +28,7 @@ const Weather = () => {
           return;
         }
 
-        console.log(data);
+        console.log(data); /*remove when done*/
 
         const icon = weathericons[data.weather[0].icon] || sun_icon
         const theweatheris = data.weather[0].description

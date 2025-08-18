@@ -4,7 +4,8 @@
         with className="app-container"*/
     padding: 40px; 
     border-radius: 10px; 
-    background-image: linear-gradient(45deg, #fecc9f,#f2df9f, #d8f5b1);
+    background-image: linear-gradient(45deg, #fecc9f,#f2df9f, #d8f5b1); 
+        /*the backgorund color of the box in the middle*/
     /*these below should have everything inside the container stack on top of each other*/
     display: flex;
     flex-direction: column;
