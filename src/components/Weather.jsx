@@ -35,6 +35,10 @@ const Weather = () => {
   }
 
   const search = async(city, country) => {
+    if(city === "") {
+      alert("Enter City Name");
+      return;
+    }
     try {
         const url = `https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&units=metric&appid=${import.meta.env.VITE_APP_ID}`;
         /*const aqiURL = `http://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=${import.meta.env.VITE_APP_ID}`;*/
@@ -75,32 +79,33 @@ const Weather = () => {
               onClick={()=>search(userinput.current.value)} />
         </div>
 
-        <img src={weatherData.icon} alt="clouds" className='weatherIcon'/>
+        {weatherData?<>
+          <img src={weatherData.icon} alt="clouds" className='weatherIcon'/>
 
-        <div className="weatherDataMain">
-          <p className="weatherDescribe">{weatherData.theweatheris}</p>
-          <p className="temp">{weatherData.temperature} <a href="">&deg;C</a> </p>
-          <p className="location">{weatherData.location}, {weatherData.country}</p>
-        </div>
+          <div className="weatherDataMain">
+            <p className="weatherDescribe">{weatherData.theweatheris}</p>
+            <p className="temp">{weatherData.temperature} <a href="">&deg;C</a> </p>
+            <p className="location">{weatherData.location}, {weatherData.country}</p>
+          </div>
 
-        <div className="weather-data"> 
-          <div className="col">          
-              <img src={humidity_icon} alt="Humidity represented by water droplets" />
-              <div>
-                <span>Humidity: </span>
-                <p>{weatherData.humidity} % </p>
-              </div> 
-            </div>
-
+          <div className="weather-data"> 
             <div className="col">          
-              <img src={windy_icon} alt="An icon representing wind speed"/>
-              <div>
-                <span>Wind Speed</span>
-                <p>{weatherData.windspeed} km/h</p>
-              </div> 
-            </div>
-        </div>
+                <img src={humidity_icon} alt="Humidity represented by water droplets" />
+                <div>
+                  <span>Humidity: </span>
+                  <p>{weatherData.humidity} % </p>
+                </div> 
+              </div>
 
+              <div className="col">          
+                <img src={windy_icon} alt="An icon representing wind speed"/>
+                <div>
+                  <span>Wind Speed</span>
+                  <p>{weatherData.windspeed} km/h</p>
+                </div> 
+              </div>
+            </div>
+          </>:<></>}
     </div>
   )
 }
