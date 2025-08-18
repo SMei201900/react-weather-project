@@ -1,4 +1,3 @@
-import React from 'react'
 import {defaultIcons} from "./weathericons"
 
 const WeatherDetails = ({ weatherData }) => {
