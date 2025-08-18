@@ -12,7 +12,7 @@
 }
 
 h1 {
-    font-size: 48px;
+    font-size: 60px;
     padding-bottom: 10px;
 }
 
@@ -40,4 +40,29 @@ h1 {
 
 .searchbar img:hover {
     border: dashed 2px #f3b6c7;
+}
+
+.weatherIcon {
+    width: 150px;
+    margin: 30px 0; 
+}
+
+.temp {
+    font-size: 48px;
+    line-height: 1;
+}
+
+.temp a {
+    color: black;
+    text-decoration: none;    
+}
+
+.temp a:hover {
+    color: #F25477;
+    text-decoration: wavy underline 3px #F25477;
+}
+
+
+.location {
+    font-size: 38px;
 }
