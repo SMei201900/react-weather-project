@@ -1,13 +1,14 @@
 import React from 'react'
 import './Weather.css';
+import search_icon from '../assets/search-icon.jpg'
 
 const Weather = () => {
   return (
     <div className='weather'>
         <h1>Weather</h1>
-        <div className='search-bar'>
+        <div className='searchbar'>
             <input type="text" placeholder='Chicago' />
-            <img src="" alt="" />
+            <img src={search_icon} alt="magnifying glass image to represent a search icon" />
         </div>
 
     </div>

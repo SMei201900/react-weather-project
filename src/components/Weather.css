@@ -1,0 +1,5 @@
+.searchbar img {
+    padding-left: 10px; 
+    max-height: 50px;
+    mix-blend-mode: multiply; /*removes the white background from the image*/
+}
