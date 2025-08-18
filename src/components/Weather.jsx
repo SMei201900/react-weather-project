@@ -77,7 +77,7 @@ const Weather = () => {
 
         <img src={weatherData.icon} alt="clouds" className='weatherIcon'/>
 
-        <div>
+        <div className="weatherDataMain">
           <p className="weatherDescribe">{weatherData.theweatheris}</p>
           <p className="temp">{weatherData.temperature} <a href="">&deg;C</a> </p>
           <p className="location">{weatherData.location}, {weatherData.country}</p>
@@ -108,13 +108,14 @@ const Weather = () => {
 export default Weather
 
 
-/*we need the weather for ONE day 
-it should show the temperature, description of the weather (ex: sunny, runny, overcast clouds, thunderstorm), 
-    an icon representing the weather 
-We need a search bar to find the weather of a place 
-the searchbar should be replaced by the name of the place 
+/*
+other weather information that we still need is sunset/sunrise time
+  SO data.sys.sunrise AND data.sys.sunset 
+    we would need to convert these times to actually readable ones
+      in the same area there is data.sys.timezone  
+feels-like is provided by openAPI so we can add that maybe? data.main.feels_like
+temp min and max? data.main.temp_max AND data.main.temp_min
 
-other weather information includes humidity/rain, sunset?, wind speed, ??? represented by the stonks icon
 
 sunset might be uv index also 
 

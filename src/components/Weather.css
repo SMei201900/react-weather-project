@@ -47,10 +47,13 @@ h1 {
     margin: 20px 0 10px 0; 
 }
 
+.weatherDataMain {
+    text-align: center;
+}
+
 .temp {
     font-size: 48px;
     line-height: 1;
-    text-align: center;
 }
 
 .temp a {
@@ -69,7 +72,6 @@ h1 {
 
 .location {
     font-size: 38px;
-    text-align: center;
 }
 
 .weather-data {
