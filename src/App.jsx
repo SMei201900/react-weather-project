@@ -1,12 +1,17 @@
-//import { useState } from 'react'
-import './App.css'
+import React from 'react'
+import Weather from './components/Weather'
 
-function App() {
-    
+const App = () => {
+  return (
+    <div className="app-container">
+        <Weather/>
+    </div>
+  )
 }
 
 export default App
 
+/*rafac is shortcut*/
 
 /*we need the weather for ONE day 
 it should show the temperature, description of the weather (ex: sunny, runny, overcast clouds, thunderstorm), 

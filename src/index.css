@@ -1,15 +1,15 @@
+* { /*applies onto everything*/
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 h1 {
   color: red;
 }
 
-h2 {
-  color: blue;
-}
-
-h3 {
-  color: green; 
-}
-
-p {
-  color: gray;
+.app-container {
+  min-height: 100vh;
+  display: grid; /*should align our app in the middle*/
+  background-color: #C8A2C8;
 }
