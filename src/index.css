@@ -1,11 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
 * { /*applies onto everything*/
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
+  font-family: "Sour Gummy", sans-serif;
 
-h1 {
-  color: red;
 }
 
 .app-container {
