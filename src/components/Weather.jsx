@@ -31,7 +31,7 @@ const Weather = ({userinput}) => {
 
         <ToastContainer /> 
 
-        {weatherData && <WeatherDetails weatherData={weatherData}/> }
+        {weatherData && <WeatherDetails weatherData={weatherData}/> } 
     </div>
   )
 }
