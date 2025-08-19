@@ -1,4 +1,5 @@
 import {defaultIcons} from "./weathericons"
+import mapIcon from "../assets/map-icon.jpg"
 
 const WeatherDetails = ({ weatherData }) => {
   return (
@@ -8,7 +9,11 @@ const WeatherDetails = ({ weatherData }) => {
       <div className="weatherDataMain">
         <p className="weatherDescribe">{weatherData.theweatheris}</p>
         <p className="temp">{weatherData.temperature} <a href="">&deg;C</a></p>
-        <p className="location">{weatherData.location}, {weatherData.country}</p>
+        <span className="mapIconLocation">
+          <img src={mapIcon} alt="A map icon" />
+          <p className="location">{weatherData.location}, {weatherData.country}</p>
+        </span>
+        
       </div>
 
       <div className="weather-data">

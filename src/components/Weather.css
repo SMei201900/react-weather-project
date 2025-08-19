@@ -76,6 +76,16 @@ h1 {
     font-size: 35px;
 }
 
+.mapIconLocation { /*I want the mapIcon to sit next to the locationName*/
+    mix-blend-mode: multiply;
+    display: flex;
+    align-items: center;
+}
+
+.weatherDataMain img { /*this should be the mapIcon img*/
+    width: 40px;
+}
+
 .location {
     font-size: 38px;
 }
