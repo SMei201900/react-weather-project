@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react'
 import './Weather.css';
 import search_icon from '../assets/search-icon.jpg'
 import {ToastContainer} from 'react-toastify' /*required somewhere in return to use toast popups*/
-import 'react-toastify/dist/ReactToastify.css';
 import { fetchWeatherData } from './WeatherData'; /*moved weatherdata here*/
 import WeatherDetails from './WeatherDetails'; /*my UI essentially*/
 

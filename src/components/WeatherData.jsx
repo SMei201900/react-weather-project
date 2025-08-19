@@ -1,5 +1,5 @@
 import {toast} from 'react-toastify'
-import { weathericons } from './weathericons';
+import { weathericons } from './WeatherIcons';
 
 export const fetchWeatherData = async (city) => {
     /*created to handle an empty search*/

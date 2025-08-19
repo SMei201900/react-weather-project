@@ -1,5 +1,6 @@
-import {defaultIcons} from "./weathericons"
+import {defaultIcons} from "./WeatherIcons"
 import mapIcon from "../assets/map-icon.jpg"
+import ConvertTemp from "./ConvertTemp";
 
 const WeatherDetails = ({ weatherData }) => {
   return (
@@ -8,7 +9,10 @@ const WeatherDetails = ({ weatherData }) => {
 
       <div className="weatherDataMain">
         <p className="weatherDescribe">{weatherData.theweatheris}</p>
-        <p className="temp">{weatherData.temperature} <a href="">&deg;C</a></p>
+        <p className="temp">
+          <ConvertTemp celsius={weatherData.temperature} /> 
+        </p>
+        
         <span className="mapIconLocation">
           <img src={mapIcon} alt="A map icon" />
           <p className="location">{weatherData.location}, {weatherData.country}</p>
