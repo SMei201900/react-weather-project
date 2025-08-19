@@ -19,11 +19,8 @@ h1 {
     padding-bottom: 10px;
 }
 
-.searchbar, .weather-data, .weather-data .col {
+.searchbar {    
     display: flex; /*we want items to align side-by-side*/
-}
-
-.searchbar {
     align-items: center;
     gap: 5px;
 }
@@ -94,6 +91,9 @@ h1 {
     width: 100%;
     margin-top: 40px;
     justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-flow: row;
 }
 
 .weather-data .col{
@@ -108,6 +108,9 @@ h1 {
     padding: 8px; 
 }
 
+.sunTime {
+    margin-top: 15px;
+}
 
 
 
