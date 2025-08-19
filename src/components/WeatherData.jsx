@@ -37,13 +37,6 @@ export const fetchWeatherData = async (city) => {
     }
 }; 
 
-/*
-feels-like is provided by openAPI so we can add that maybe? data.main.feels_like
-temp min and max? data.main.temp_max AND data.main.temp_min
-
-sunset might be uv index also 
-
-*/
 
 
 

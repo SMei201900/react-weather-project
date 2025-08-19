@@ -36,17 +36,6 @@ const WeatherDetails = ({ weatherData }) => {
             <p>{weatherData.windspeed} km/h</p>
           </div>
         </div>
-
-        <div className="col sunTime">
-          <span>Sunrise Time: </span>
-          <p>something</p>
-        </div>
-
-        <div className="col sunTime">
-          <span>Sunset Time: </span>
-          <p>also something</p>
-        </div>
-
       </div>
     </>
   );
