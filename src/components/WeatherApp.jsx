@@ -48,16 +48,3 @@ to WeatherDetails
 
 */
 
-
-/*
-other weather information that we still need is sunset/sunrise time
-  SO data.sys.sunrise AND data.sys.sunset 
-    we would need to convert these times to actually readable ones
-      in the same area there is data.sys.timezone  
-feels-like is provided by openAPI so we can add that maybe? data.main.feels_like
-temp min and max? data.main.temp_max AND data.main.temp_min
-
-sunset might be uv index also 
-
-*/
-
