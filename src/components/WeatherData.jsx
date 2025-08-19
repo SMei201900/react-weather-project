@@ -21,6 +21,14 @@ export const fetchWeatherData = async (city) => {
         const icon = weathericons[data.weather[0].icon] || "null"
         const theweatheris = data.weather[0].description
 
+        const sunriseTimeNew = new Date(data.sys.sunrise * 1000)
+        const sunrise = sunriseTimeNew.toLocaleTimeString(
+          [], {hour: '2-digit', minute: '2-digit'} )
+
+        const sunsetTimeNew = new Date(data.sys.sunset* 1000)
+        const sunset = sunsetTimeNew.toLocaleTimeString(
+          [], {hour: '2-digit', minute: '2-digit'} )
+
         return{
           humidity: data.main.humidity, 
           windspeed: data.wind.speed,
@@ -28,7 +36,9 @@ export const fetchWeatherData = async (city) => {
           location: data.name,
           icon,
           theweatheris,
-          country: data.sys.country
+          country: data.sys.country,
+          sunrise,
+          sunset
         }; 
      } catch (error) {
         console.log("Error in fetching data. Here is the error message: ", error)
@@ -38,10 +48,6 @@ export const fetchWeatherData = async (city) => {
 }; 
 
 /*
-other weather information that we still need is sunset/sunrise time
-  SO data.sys.sunrise AND data.sys.sunset 
-    we would need to convert these times to actually readable ones
-      in the same area there is data.sys.timezone  
 feels-like is provided by openAPI so we can add that maybe? data.main.feels_like
 temp min and max? data.main.temp_max AND data.main.temp_min
 
