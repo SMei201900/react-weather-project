@@ -1,5 +1,5 @@
 import React, {useRef} from 'react'
-import Weather from './components/Weather'
+import Weather from './components/WeatherApp'
 import './App.css';
 
 const App = () => {
