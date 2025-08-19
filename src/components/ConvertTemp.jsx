@@ -10,7 +10,6 @@ const ConvertTemp = ({ celsius }) => {
 
   const fahrenheit = (celsius * 9) / 5 + 32;
 
-
   /*so when we click on the link we call toggleUnit that makes setIsCel to false now 
     which allows us to then call fahrenheit but rounded*/
   return (
