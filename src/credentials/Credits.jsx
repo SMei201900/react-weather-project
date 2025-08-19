@@ -4,9 +4,8 @@ const Credits = () => {
   return (
     <div className="credit">
 		Created by {""}
-        <a href="https://www.linkedin.com/in/sally-mei-1a4439210/"
-			  target="_blank"
-			  rel="noreferrer">
+        <a href="https://www.linkedin.com/in/sally-mei-bird01/"
+			  target="_blank">
         Sally Mei 
         </a>
 	  </div>  

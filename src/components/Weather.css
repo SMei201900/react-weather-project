@@ -19,6 +19,10 @@ h1 {
     padding-bottom: 10px;
 }
 
+.searchbar, .weather-data, .weather-data .col {
+    display: flex;
+}
+
 .searchbar {    
     display: flex; /*we want items to align side-by-side*/
     align-items: center;
@@ -91,9 +95,6 @@ h1 {
     width: 100%;
     margin-top: 40px;
     justify-content: space-between;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-auto-flow: row;
 }
 
 .weather-data .col{
