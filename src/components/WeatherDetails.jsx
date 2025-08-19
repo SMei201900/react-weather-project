@@ -39,12 +39,12 @@ const WeatherDetails = ({ weatherData }) => {
 
         <div className="col sunTime">
           <span>Sunrise Time: </span>
-          <p>{weatherData.sunrise}</p>
+          <p>something</p>
         </div>
 
         <div className="col sunTime">
           <span>Sunset Time: </span>
-          <p>{weatherData.sunset}</p>
+          <p>also something</p>
         </div>
 
       </div>
