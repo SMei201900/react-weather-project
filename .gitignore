@@ -24,4 +24,6 @@ dist-ssr
 *.sw?
 
 # .gitignore
+# Environment files
 .env
+.env.*.local
