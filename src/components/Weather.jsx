@@ -3,7 +3,7 @@ import './Weather.css';
 import search_icon from '../assets/search-icon.jpg'
 import cloudy_icon from '../assets/cloudy-icon.png'
 
-/*
+/*git rm --cached .env
 import rain_icon from '../assets/rain-icon.png'
 import snowy_icon from '../assets/snowy-icon.png'
 import sun_icon from '../assets/sun-icon.png'
