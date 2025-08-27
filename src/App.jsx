@@ -1,26 +1,17 @@
-import React from 'react'
-import Weather from './components/Weather'
+import React, {useRef} from 'react'
+import Weather from './components/WeatherApp'
+import './App.css';
+import Credits from './credentials/Credits';
 
 const App = () => {
+  const userinput = useRef(); 
+  
   return (
     <div className="app-container">
-        <Weather/>
+        <Weather userinput={userinput}/> {/*using props here*/}
+        <Credits />
     </div>
   )
 }
 
 export default App
-
-/*rafac is shortcut*/
-
-/*
-https://www.flaticon.com/free-animated-icons/weather 
-https://fontawesome.com/icons/categories/weather 
-*/
-
-/*MAYBES
-https://www.flaticon.com/free-animated-icon/hurricane_17858153 
-https://www.flaticon.com/free-animated-icon/flood_18821565 
-https://www.flaticon.com/free-animated-icon/twister_11688571 
-https://www.flaticon.com/free-animated-icon/drought_17858201 
-*/
