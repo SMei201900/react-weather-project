@@ -47,4 +47,3 @@ we also created a prop to then send the weatherData
 to WeatherDetails
 
 */
-

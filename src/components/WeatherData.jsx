@@ -37,9 +37,3 @@ export const fetchWeatherData = async (city) => {
     }
 }; 
 
-
-
-
-
-
-

@@ -20,7 +20,3 @@ const ConvertTemp = ({ celsius }) => {
 };
 
 export default ConvertTemp;
-
-
-
-

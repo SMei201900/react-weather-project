@@ -30,3 +30,4 @@ export const defaultIcons = {
     windy_icon: windy_icon,
     humidity_icon: humidity_icon
 }
+ 
